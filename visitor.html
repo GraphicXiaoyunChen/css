@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>访客 - 艺术家网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="visitor.html">Visitor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="visitor">
+            <form>
+                <label for="username">用户名:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="clock">时钟:</label>
+                <input type="time" id="clock" name="clock">
+                <label for="calendar">日历:</label>
+                <input type="date" id="calendar" name="calendar">
+            </form>
+            <p>Tracking</p>
+            <button class="circle-button">+</button>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://instagram.com/artist" class="icon instagram"></a>
+                <a href="https://facebook.com/artist" class="icon facebook"></a>
+                <a href="https://upwork.com" class="icon upwork"></a>
+            </div>
+            <p>xxx@gmail.com</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.circle-button').addEventListener('click', () => {
+            const date = document.querySelector('#calendar').value;
+            if (date) {
+                alert(`添加图片到${date}`);
+                // 实际实现添加图片功能
+            }
+        });
+    </script>
+</body>
+</html>
